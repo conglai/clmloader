@@ -8,7 +8,7 @@
 [license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [npm-version-image]: http://img.shields.io/npm/v/clmloader.svg?style=flat
 [npm-downloads-image]: http://img.shields.io/npm/dm/clmloader.svg?style=flat
-[travis-image]: https://travis-ci.org/conglai/clmloader.svg?branch=master?t=11
+[travis-image]: https://travis-ci.org/conglai/clmloader.svg?branch=master&t=11
 [coverage-image]: https://coveralls.io/repos/github/conglai/clmloader/badge.svg?t=1
 
 
