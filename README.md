@@ -24,6 +24,7 @@
 ```
 ~ npm install clmloader
 ```
+> It's an better idea use this module with [cl-router](https://github.com/conglai/cl-router)
 
 ## Usage
 
