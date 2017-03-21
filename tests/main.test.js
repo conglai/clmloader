@@ -16,7 +16,8 @@ describe('加载模块测试', () => {
       dep2.test.should.be.equal(4);
     });
   });
-  it('修改默认地址', () => {
+
+  it('修改默认模块名', () => {
     return co(function*(){
       let dep1 = { test: 0 };
       let dep2 = { test: 0 };
@@ -32,9 +33,25 @@ describe('加载模块测试', () => {
       map['dir1'].common.should.be.equal('xx');
       map['dir2'].common.should.be.equal('xxx');
       map['dir2'].name.should.be.equal('dir2');
-      map['dir2'].path.should.be.equal(__dirname + '/examples-1/dir2');
       dep1.test.should.be.equal(2);
       dep2.test.should.be.equal(4);
+    });
+  });
+
+  it('加载文件模块', () => {
+    return co(function*(){
+      let dep1 = { test: 0 };
+      let dep2 = { test: 0 };
+      let map = yield loadMoudles({
+        path: __dirname + '/examples-2',
+        deps: [dep1, dep2],
+        defaultFile: 'router',
+        shouldLoadFile: true,
+        attach: {
+          common: 'xx'
+        }
+      });
+      map.should.have.keys('router', 'router-12');
     });
   });
 });
